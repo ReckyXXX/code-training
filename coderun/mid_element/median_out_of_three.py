@@ -34,8 +34,9 @@ def median_out_of_three(numbers):
 
 
 def main():
-    median_out_of_three([1, 2, 3])
-    pass
+    numbers = [int(x) for x in input().split()[:3]]
+    median = median_out_of_three(numbers)
+    print(median)
 
 
 if __name__ == '__main__':
