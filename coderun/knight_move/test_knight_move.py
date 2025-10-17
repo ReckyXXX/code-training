@@ -24,3 +24,7 @@ def test_no_moves():
 def test_already_here():
     assert calculate_knight_moves_count(1, 1) == 1
 
+@pytest.mark.timeout(1)
+def test_max():
+    assert calculate_knight_moves_count(50, 50) == 0
+
