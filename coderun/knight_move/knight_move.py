@@ -25,18 +25,29 @@ import sys
 
 # moves are "paths"
 def calculate_knight_moves_count(N, M):
-    return calculate_position_moves_count(1, 1, N, M)
+    position_path_map = dict()
+    return calculate_position_moves_count((1, 1), N, M, position_path_map)
 
 
-def calculate_position_moves_count(n, m, N, M):
+def calculate_position_moves_count(position, N, M, position_path_map):
+    if position in position_path_map:
+        return position_path_map[position]
+
+    n = position[0]
+    m = position[1]
     if (n < 1 or n > N or m < 1 or m > M):
         return 0
     if (n == N and m == M):
         return 1
-    result = 0
-    result += calculate_position_moves_count(n + 2, m + 1, N, M)
-    result += calculate_position_moves_count(n + 1, m + 2, N, M)
-    return result
+
+    path1Start = (n + 2, m + 1)
+    path1Count = calculate_position_moves_count(path1Start, N, M, position_path_map)
+    position_path_map[path1Start] = path1Count
+
+    path2Start = (n + 1, m + 2)
+    path2Count = calculate_position_moves_count(path2Start, N, M, position_path_map)
+    position_path_map[path2Start] = path2Count
+    return path1Count + path2Count
     
 
 def main():
