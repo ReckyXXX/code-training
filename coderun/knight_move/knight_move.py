@@ -1,5 +1,6 @@
 """
     Difficulty: [Easy]
+    Tags: dynamic_programming_2D
 
 Дана прямоугольная доска N×M
 N×M (N строк и M столбцов). 

@@ -1,5 +1,6 @@
 """
     Difficulty: [Easy]
+    Tags: sort
 
     Рассмотрим три числа 
     a
