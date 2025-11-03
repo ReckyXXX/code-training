@@ -3,6 +3,11 @@
     Tags: sort
 
     Quicksort algorithm realization
+    Speed: 
+        mid: O(nlog(n))
+        bad: O(n^2)
+    Memory:
+        all: O(log(n))
 """
 
 import sys

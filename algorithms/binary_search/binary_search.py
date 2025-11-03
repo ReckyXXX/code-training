@@ -3,6 +3,10 @@
     Tags: search
 
     Binary search realization
+    Speed: 
+        all: log(n)
+    Memory:
+        all: -
 """
 
 
